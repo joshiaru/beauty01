@@ -1,292 +1,256 @@
-<!DOCTYPE html>
-
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Ember Studio Brows &amp; Lashes</title>
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Source+Sans+3:wght@400;600&amp;family=Fira+Code&amp;display=swap" rel="stylesheet"/>
-<!-- Material Symbols -->
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<!-- Tailwind CSS -->
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Browz and Lash Bar</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Work+Sans:wght@400;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <script id="tailwind-config">
-        tailwind.config = {
-          darkMode: "class",
-          theme: {
-            extend: {
-              "colors": {
-                      "inverse-primary": "#ffb59d",
-                      "primary": "#9b2f00",
-                      "on-tertiary-fixed": "#001a41",
-                      "surface-variant": "#eae1da",
-                      "outline": "#8d7168",
-                      "surface-raised": "#E7E5E4",
-                      "primary-fixed": "#ffdbd0",
-                      "surface-container-highest": "#eae1da",
-                      "error": "#DC2626",
-                      "tertiary": "#0051af",
-                      "on-tertiary": "#ffffff",
-                      "text-primary": "#1C1917",
-                      "on-secondary-container": "#684000",
-                      "on-tertiary-fixed-variant": "#004494",
-                      "surface": "#F5F5F4",
-                      "surface-container-high": "#f0e6e0",
-                      "tertiary-fixed": "#d8e2ff",
-                      "surface-container-low": "#fcf2eb",
-                      "on-surface-variant": "#59413a",
-                      "surface-bright": "#fff8f5",
-                      "on-error": "#ffffff",
-                      "background": "#FAFAF9",
-                      "on-primary-fixed": "#390c00",
-                      "error-container": "#ffdad6",
-                      "on-secondary": "#ffffff",
-                      "on-tertiary-container": "#ecf0ff",
-                      "secondary": "#855300",
-                      "tertiary-container": "#0069de",
-                      "secondary-fixed-dim": "#ffb95f",
-                      "on-surface": "#1f1b17",
-                      "on-background": "#1f1b17",
-                      "text-secondary": "#57534E",
-                      "on-secondary-fixed": "#2a1700",
-                      "on-primary-container": "#ffece7",
-                      "secondary-container": "#fea619",
-                      "primary-hover": "#9A3412",
-                      "on-secondary-fixed-variant": "#653e00",
-                      "warning": "#D97706",
-                      "on-primary": "#ffffff",
-                      "inverse-on-surface": "#f9efe8",
-                      "on-primary-fixed-variant": "#832600",
-                      "inverse-surface": "#342f2b",
-                      "on-error-container": "#93000a",
-                      "border": "#D6D3D1",
-                      "surface-container-lowest": "#ffffff",
-                      "primary-container": "#c2410c",
-                      "tertiary-fixed-dim": "#adc6ff",
-                      "surface-container": "#f6ece6",
-                      "primary-fixed-dim": "#ffb59d",
-                      "surface-dim": "#e2d8d2",
-                      "outline-variant": "#e1bfb5",
-                      "surface-tint": "#ac3400",
-                      "secondary-fixed": "#ffddb8",
-                      "success": "#16A34A"
-              },
-              "borderRadius": {
-                      "DEFAULT": "0.25rem",
-                      "lg": "0.5rem",
-                      "xl": "0.75rem",
-                      "full": "9999px"
-              },
-              "spacing": {
-                      "lg": "24px",
-                      "md": "16px",
-                      "xs": "4px",
-                      "container-max": "1200px",
-                      "base": "4px",
-                      "gutter": "24px",
-                      "xl": "48px",
-                      "sm": "8px"
-              },
-              "fontFamily": {
-                      "body": ["Source Sans 3"],
-                      "headline": ["Playfair Display"],
-                      "section-heading": ["Playfair Display"],
-                      "caption": ["Source Sans 3"],
-                      "code": ["Fira Code"],
-                      "subhead": ["Source Sans 3"],
-                      "overline": ["Source Sans 3"],
-                      "small": ["Source Sans 3"],
-                      "display": ["Playfair Display"]
-              }
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error-container": "#ffdad6",
+                    "on-secondary-fixed-variant": "#344c3e",
+                    "outline-variant": "#cac4d0",
+                    "on-background": "#1c1b1f",
+                    "inverse-surface": "#323034",
+                    "on-error": "#ffffff",
+                    "on-tertiary-container": "#e2e1e1",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "surface-container": "#f2ecf2",
+                    "primary-fixed-dim": "#cfbdfe",
+                    "inverse-primary": "#cfbdfe",
+                    "on-error-container": "#93000a",
+                    "on-secondary-fixed": "#082014",
+                    "secondary": "#4c6455",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "surface-tint": "#65558f",
+                    "surface": "#fdf8fd",
+                    "surface-container-low": "#f7f2f8",
+                    "on-secondary-container": "#506859",
+                    "background": "#fdf8fd",
+                    "secondary-fixed-dim": "#b2cdbb",
+                    "primary-container": "#6b5b95",
+                    "tertiary-fixed": "#e3e2e2",
+                    "secondary-container": "#cbe6d4",
+                    "error": "#ba1a1a",
+                    "outline": "#7a7580",
+                    "secondary-fixed": "#cee9d6",
+                    "surface-variant": "#e6e1e6",
+                    "surface-container-high": "#ece6ec",
+                    "tertiary-container": "#636464",
+                    "on-tertiary-fixed-variant": "#464747",
+                    "primary": "#53437b",
+                    "on-primary-container": "#e8dcff",
+                    "on-primary-fixed": "#201047",
+                    "on-surface": "#1c1b1f",
+                    "on-surface-variant": "#49454f",
+                    "surface-container-highest": "#e6e1e6",
+                    "primary-fixed": "#e9ddff",
+                    "tertiary-fixed-dim": "#c6c6c6",
+                    "surface-dim": "#ddd8de",
+                    "on-primary-fixed-variant": "#4d3d75",
+                    "inverse-on-surface": "#f5eff5",
+                    "tertiary": "#4b4c4c",
+                    "surface-bright": "#fdf8fd",
+                    "on-secondary": "#ffffff"
             },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "xs": "4px",
+                    "xl": "80px",
+                    "sm": "12px",
+                    "gutter": "24px",
+                    "md": "24px",
+                    "base": "8px",
+                    "lg": "48px",
+                    "container-max": "1200px"
+            },
+            "fontFamily": {
+                    "h3": ["Noto Serif"],
+                    "body-md": ["Work Sans"],
+                    "label-sm": ["Work Sans"],
+                    "body-lg": ["Work Sans"],
+                    "h1": ["Noto Serif"],
+                    "h2": ["Noto Serif"]
+            },
+            "fontSize": {
+                    "h3": ["24px", {"lineHeight": "1.4", "letterSpacing": "0", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "h1": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "h2": ["36px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "400"}]
+            }
           },
-        }
+        },
+      }
     </script>
 <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        body {
-            background-color: #FAFAF9;
-            color: #1C1917;
-            font-family: "Source Sans 3", sans-serif;
-        }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        vertical-align: middle;
+      }
+      .thin-silver-separator {
+        height: 1px;
+        background: linear-gradient(90deg, transparent, #cac4d0, transparent);
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
     </style>
 </head>
-<body class="overflow-x-hidden">
-<!-- TopNavBar Shared Component -->
-<div class="relative flex h-auto w-full flex-col bg-[#fcf9f8] group/design-root" style='font-family: "Noto Serif", "Noto Sans", sans-serif;'>
-<div class="layout-container flex h-full grow flex-col">
-<div class="px-4 md:px-40 flex flex-1 justify-center py-5">
-<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
-<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f3eae7] px-4 md:px-10 py-3">
-<div class="flex items-center gap-4 text-[#1c110d]">
-<div class="size-6 text-primary">
-<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M6 6H42L36 24L42 42H6L12 24L6 6Z" fill="currentColor"></path></svg>
+<body class="bg-background text-on-background font-body-md" data-mode="connect">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md dark:bg-zinc-950/80 border-b border-zinc-100 dark:border-zinc-900 shadow-[0_4px_20px_-10px_rgba(107,91,149,0.1)]">
+<div class="flex justify-between items-center px-12 h-24 w-full max-w-screen-2xl mx-auto">
+<div class="text-2xl font-serif tracking-widest text-[#6B5B95] dark:text-purple-300">Browz and Lash Bar</div>
+<div class="hidden md:flex items-center gap-10 font-serif tracking-tight text-sm uppercase">
+<a class="text-zinc-500 hover:text-[#6B5B95] transition-all duration-500 ease-out" href="#services">About US</a>
+<a class="text-zinc-500 hover:text-[#6B5B95] transition-all duration-500 ease-out" href="services.html">Services</a>
+<a class="text-zinc-500 hover:text-[#6B5B95] transition-all duration-500 ease-out" href="#contact">Pricing</a>
 </div>
-<h2 class="text-[#1c110d] text-lg font-bold leading-tight tracking-[-0.015em] font-headline">Ember Studio</h2>
+<button class="bg-[#6B5B95] text-white px-8 py-3 font-serif text-sm uppercase tracking-widest transition-transform active:scale-95 hover:opacity-80">
+                Book Now
+            </button>
 </div>
-<div class="flex flex-1 justify-end gap-8 items-center">
-<div class="hidden md:flex items-center gap-9">
-<a class="text-[#1c110d] text-sm font-medium leading-normal hover:text-primary transition-colors" href="#services">Services</a>
-<a class="text-[#1c110d] text-sm font-medium leading-normal hover:text-primary transition-colors" href="#contact">Contact</a>
-<a class="text-[#1c110d] text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Portfolio</a>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative min-h-[870px] flex items-center justify-center overflow-hidden px-12 py-xl">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-30 grayscale-[20%]" data-alt="Serene close-up of a woman's face with soft focused eyes and perfectly groomed brows in a warm lavender-tinted sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrih-S5AQ2ZsDIGYqDRVosj7x2R-F8Ceh8vE5Wg6k5sk-aZrDI3r1ZAe9Yn16H9YuQlIIavkYdUCSAB25qn4XUW9ie_k2KIrnVxYcyEbcT6Xg7AlVhijCXFR0bhUuIqcJkp1kT_OAsGl5Zb_Iah0Y7rFGZBNCVFAEiQUVB0KgMtQxR-ecrBxuLuwEPjk22mxFhbGXtZyEUm_eBPyaEaGMD6bNLycwVaSTPy8mI6rzvbZsHgub4FypVnA7aj-V7DNw0FKqKjxMSJ6s">
+<div class="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background"></div>
 </div>
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#c2400c] text-[#fcf9f8] text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary-hover transition-all">
-<span class="truncate">Book Now</span>
-</button>
-</div>
-</header>
-<!-- Hero Section Integration -->
-<div class="@container mt-6">
-<div class="@[480px]:p-4">
-<div class="flex min-h-[520px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-8 relative overflow-hidden" data-alt="Interior of a luxury spa with soft terracotta walls, warm golden candle lighting, and professional aesthetician equipment in soft focus background" style='background-image: linear-gradient(rgba(28, 25, 23, 0.45), rgba(28, 25, 23, 0.65)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuC4ZUH0EaCoVbbaSJACT3UOlBjEQAeSqtvaH7oTppMcBQGEnbA_ByQ0IXtDAy1LPEAm9D2XRhNVixrZx3V5mNUQHCPQJgVZz9V3g20ryfFUe_eJSv_vPIaMeeFWFgwnqlNA4L4l_IDGkkRrY9DLqR-zfaxxb7qhbxcxFt12rUvvtackPWqvretHv0noLa617y_VEAjUBTMFWKb0Ms2-Oec0tBsqS7Ody8casCIfYVHTvViW9VAdEAmBMtsYv0crYHhqJtiKc6LDEdQ");'>
-<div class="flex flex-col gap-4 text-center max-w-2xl z-10">
-<h1 class="text-white text-4xl font-bold leading-tight tracking-[-0.033em] @[480px]:text-6xl font-headline">
-                                        Ember Studio Brows &amp; Lashes
-                                    </h1>
-<h2 class="text-white/90 text-base font-normal leading-relaxed @[480px]:text-xl font-body">
-                                        Elevating your natural beauty with precision and care in a calm, luxurious home studio environment. Crafting the perfect frame for your gaze.
-                                    </h2>
+<div class="relative z-10 max-w-4xl text-center">
+<span class="font-label-sm text-primary mb-sm block uppercase tracking-[0.3em]">The Art of the Look</span>
+<h1 class="font-h1 text-on-background mb-md leading-tight">Browz and Lash Bar</h1>
+<p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto italic mb-lg">
+                    Elevating your natural beauty through meticulous craft and serene artistry. A private sanctuary dedicated to the detail of your gaze.
+                </p>
+<div class="flex justify-center gap-6">
+<div class="w-24 h-[1px] bg-[#6B5B95]/30 self-center"></div>
+<span class="material-symbols-outlined text-primary" data-icon="spa">spa</span>
+<div class="w-24 h-[1px] bg-[#6B5B95]/30 self-center"></div>
 </div>
 </div>
+<!-- Subtle Botanical Watermark -->
+<div class="absolute bottom-10 right-10 opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-[120px]" data-icon="potted_plant">potted_plant</span>
 </div>
+</section>
+<!-- Services Section -->
+<!-- Get in Touch Section -->
+<section class="py-xl px-12 bg-white" id="contact">
+<div class="max-w-7xl mx-auto">
+<div class="grid md:grid-cols-2 gap-xl">
+<!-- Contact Details -->
+<div class="space-y-lg order-2 md:order-1">
+<div>
+<h2 class="font-h2 text-on-background mb-md">Get in Touch</h2>
+<p class="font-body-md text-on-surface-variant mb-lg">Have questions about our services or need a custom consultation? We're here to help you achieve your aesthetic goals.</p>
 </div>
-<!-- Services Table -->
-<div class="scroll-mt-10" id="services">
-<div class="flex items-center gap-3 px-4 pb-3 pt-12">
-<span class="material-symbols-outlined text-primary" data-icon="auto_awesome">auto_awesome</span>
-<h2 class="text-text-primary text-[28px] font-bold leading-tight tracking-[-0.015em] font-headline">Our Services &amp; Packages</h2>
-</div>
-<div class="px-4 py-3 @container">
-<div class="flex overflow-hidden rounded-xl border border-border bg-surface shadow-sm">
-<table class="flex-1 border-collapse">
-<thead>
-<tr class="bg-surface-container">
-<th class="px-6 py-4 text-left text-text-primary text-sm font-semibold uppercase tracking-wider font-body">Service</th>
-<th class="hidden sm:table-cell px-6 py-4 text-left text-text-primary text-sm font-semibold uppercase tracking-wider font-body">Description</th>
-<th class="px-6 py-4 text-right text-text-primary text-sm font-semibold uppercase tracking-wider font-body">Price</th>
-</tr>
-</thead>
-<tbody class="divide-y divide-border">
-<tr class="hover:bg-surface-raised transition-colors">
-<td class="px-6 py-5 text-text-primary text-base font-semibold font-body">Classic Lash Set</td>
-<td class="hidden sm:table-cell px-6 py-5 text-text-secondary text-sm font-body">A natural, one-to-one lash application for everyday elegance and subtle definition.</td>
-<td class="px-6 py-5 text-right text-primary font-bold font-body">$120</td>
-</tr>
-<tr class="hover:bg-surface-raised transition-colors">
-<td class="px-6 py-5 text-text-primary text-base font-semibold font-body">Hybrid Lash Set</td>
-<td class="hidden sm:table-cell px-6 py-5 text-text-secondary text-sm font-body">A perfect blend of classic and volume for a textured, fuller look that pops.</td>
-<td class="px-6 py-5 text-right text-primary font-bold font-body">$150</td>
-</tr>
-<tr class="hover:bg-surface-raised transition-colors">
-<td class="px-6 py-5 text-text-primary text-base font-semibold font-body">Brow Lamination</td>
-<td class="hidden sm:table-cell px-6 py-5 text-text-secondary text-sm font-body">Perfectly groomed, fuller brows that stay in place, creating a brushed-up model look.</td>
-<td class="px-6 py-5 text-right text-primary font-bold font-body">$85</td>
-</tr>
-<tr class="hover:bg-surface-raised transition-colors">
-<td class="px-6 py-5 text-text-primary text-base font-semibold font-body">Signature Brow Sculpt</td>
-<td class="hidden sm:table-cell px-6 py-5 text-text-secondary text-sm font-body">Precision mapping, custom waxing, and professional tinting for your most flattering shape.</td>
-<td class="px-6 py-5 text-right text-primary font-bold font-body">$60</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-<!-- Contact & Booking Section -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-12 px-4 py-16 scroll-mt-10" id="contact">
-<!-- Contact Info -->
-<div class="flex flex-col gap-8">
-<div class="flex flex-col gap-3">
-<h2 class="text-text-primary text-[28px] font-bold leading-tight font-headline">Get in Touch</h2>
-<p class="text-text-secondary text-body max-w-md">Ready to transform your look? Fill out the form or reach out directly. I look forward to welcoming you to the studio.</p>
-</div>
-<div class="flex flex-col gap-6">
-<div class="flex items-start gap-4">
-<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-surface-container text-primary">
+<div class="space-y-md">
+<div class="flex items-start gap-md">
+<div class="w-12 h-12 bg-primary-fixed flex items-center justify-center rounded-full text-primary">
 <span class="material-symbols-outlined" data-icon="phone">phone</span>
 </div>
 <div>
-<p class="text-sm font-semibold text-text-primary uppercase tracking-wider">Phone</p>
-<p class="text-text-secondary">(555) 123-4567</p>
+<div class="font-label-sm text-on-surface-variant uppercase mb-xs">Contact</div>
+<div class="font-body-lg text-on-background">(040) 6821-308</div>
 </div>
 </div>
-<div class="flex items-start gap-4">
-<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-surface-container text-primary">
+<div class="flex items-start gap-md">
+<div class="w-12 h-12 bg-primary-fixed flex items-center justify-center rounded-full text-primary">
 <span class="material-symbols-outlined" data-icon="location_on">location_on</span>
 </div>
 <div>
-<p class="text-sm font-semibold text-text-primary uppercase tracking-wider">Location</p>
-<p class="text-text-secondary">Home Studio — Private address provided upon booking confirmation.</p>
+<div class="font-label-sm text-on-surface-variant uppercase mb-xs">Location</div>
+<div class="font-body-lg text-on-background">1, Lincoln Avenue, Sturt, 5047, SA</div>
+<div class="font-body-md text-on-surface-variant italic text-sm"><br></div>
 </div>
 </div>
-<div class="flex items-start gap-4">
-<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-surface-container text-primary">
+<div class="flex items-start gap-md">
+<div class="w-12 h-12 bg-primary-fixed flex items-center justify-center rounded-full text-primary">
 <span class="material-symbols-outlined" data-icon="schedule">schedule</span>
 </div>
 <div>
-<p class="text-sm font-semibold text-text-primary uppercase tracking-wider">Hours</p>
-<p class="text-text-secondary">Tue - Sat: 10:00 AM - 7:00 PM</p>
+<div class="font-label-sm text-on-surface-variant uppercase mb-xs">Hours</div>
+<div class="font-body-lg text-on-background">Mon, Tue, Fri, Sat: 6:30pm – 9pm<div>Wed, Sun: 8am - 8pm</div></div>
+<div class="font-body-md text-on-surface-variant text-sm">Closed Thursday</div>
 </div>
 </div>
 </div>
-<div class="flex gap-4 pt-4">
-<a class="h-10 w-10 flex items-center justify-center rounded-full bg-surface-container-high text-primary hover:bg-primary hover:text-white transition-all" href="#">
-<span class="material-symbols-outlined" data-icon="camera">camera</span>
+<div class="pt-lg flex gap-md">
+<a class="text-primary hover:opacity-70 transition-opacity" href="#">
+<span class="material-symbols-outlined text-3xl" data-icon="star">star</span>
 </a>
-<a class="h-10 w-10 flex items-center justify-center rounded-full bg-surface-container-high text-primary hover:bg-primary hover:text-white transition-all" href="#">
-<span class="material-symbols-outlined" data-icon="facebook">social_leaderboard</span>
+<a class="text-primary hover:opacity-70 transition-opacity" href="#">
+<span class="material-symbols-outlined text-3xl" data-icon="photo_camera">photo_camera</span>
 </a>
-<a class="h-10 w-10 flex items-center justify-center rounded-full bg-surface-container-high text-primary hover:bg-primary hover:text-white transition-all" href="#">
-<span class="material-symbols-outlined" data-icon="mail">mail</span>
+<a class="text-primary hover:opacity-70 transition-opacity" href="#">
+<span class="material-symbols-outlined text-3xl" data-icon="mail">mail</span>
 </a>
 </div>
 </div>
 <!-- Contact Form -->
-<div class="rounded-xl border border-border bg-surface-container-lowest p-8 shadow-sm">
-<form action="#" class="flex flex-col gap-5">
-<div class="flex flex-col gap-2">
-<label class="text-sm font-semibold text-text-primary">Full Name</label>
-<input class="w-full rounded-lg border-border bg-surface focus:border-primary focus:ring-primary/20 transition-all px-4 py-2.5" placeholder="Your name" type="text"/>
+<div class="bg-surface-container-lowest p-lg shadow-sm border border-zinc-100 order-1 md:order-2">
+<form class="space-y-md">
+<div class="space-y-xs">
+<label class="font-label-sm text-on-surface-variant uppercase">Full Name</label>
+<input class="w-full border-0 border-b border-outline bg-transparent py-base focus:ring-0 focus:border-primary transition-colors" placeholder="Your name" type="text">
 </div>
-<div class="flex flex-col gap-2">
-<label class="text-sm font-semibold text-text-primary">Email Address</label>
-<input class="w-full rounded-lg border-border bg-surface focus:border-primary focus:ring-primary/20 transition-all px-4 py-2.5" placeholder="your@email.com" type="email"/>
+<div class="space-y-xs">
+<label class="font-label-sm text-on-surface-variant uppercase">Email</label>
+<input class="w-full border-0 border-b border-outline bg-transparent py-base focus:ring-0 focus:border-primary transition-colors" placeholder="hello@example.com" type="email">
 </div>
-<div class="flex flex-col gap-2">
-<label class="text-sm font-semibold text-text-primary">Service Interest</label>
-<select class="w-full rounded-lg border-border bg-surface focus:border-primary focus:ring-primary/20 transition-all px-4 py-2.5">
-<option>Classic Lash Set</option>
-<option>Hybrid Lash Set</option>
-<option>Brow Lamination</option>
-<option>Signature Brow Sculpt</option>
-<option>General Inquiry</option>
+<div class="space-y-xs">
+<label class="font-label-sm text-on-surface-variant uppercase">Service Interest</label>
+<select class="w-full border-0 border-b border-outline bg-transparent py-base focus:ring-0 focus:border-primary transition-colors appearance-none">
+<option>Lash Enhancement</option>
+<option>Brow Sculpting</option>
+<option>Lash &amp; Brow Package</option>
+<option>Other / General Inquiry</option>
 </select>
 </div>
-<div class="flex flex-col gap-2">
-<label class="text-sm font-semibold text-text-primary">Message</label>
-<textarea class="w-full rounded-lg border-border bg-surface focus:border-primary focus:ring-primary/20 transition-all px-4 py-2.5" placeholder="How can I help you?" rows="4"></textarea>
+<div class="space-y-xs">
+<label class="font-label-sm text-on-surface-variant uppercase">Message</label>
+<textarea class="w-full border-0 border-b border-outline bg-transparent py-base focus:ring-0 focus:border-primary transition-colors resize-none" placeholder="How can we help you?" rows="4"></textarea>
 </div>
-<button class="mt-2 flex w-full items-center justify-center rounded-lg bg-primary h-12 px-6 text-white font-bold hover:bg-primary-hover transition-all shadow-md" type="submit">
-                                    Send Message
-                                </button>
+<button class="w-full bg-[#6B5B95] text-white py-md font-serif text-sm uppercase tracking-widest hover:opacity-90 transition-all" type="submit">
+                                Send Message
+                            </button>
 </form>
 </div>
 </div>
-<!-- Footer -->
-<footer class="border-t border-border mt-12 py-10 px-4 text-center">
-<div class="flex flex-col items-center gap-4">
-<div class="size-8 text-primary/60">
-<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M6 6H42L36 24L42 42H6L12 24L6 6Z" fill="currentColor"></path></svg>
 </div>
-<p class="text-text-secondary text-sm font-body">© 2024 Ember Studio Brows &amp; Lashes. All rights reserved.</p>
-<p class="text-text-secondary/60 text-[11px] uppercase tracking-widest font-overline">Crafted for natural beauty</p>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-16 px-12 border-t border-zinc-200 dark:border-zinc-900 bg-zinc-50 dark:bg-zinc-950">
+<div class="flex flex-col md:flex-row justify-between items-center gap-8 max-w-7xl mx-auto">
+<div class="text-lg font-serif italic text-zinc-800 dark:text-zinc-200">Browz and Lash Bar</div>
+<div class="flex gap-10 font-serif text-xs tracking-widest uppercase text-zinc-400 dark:text-zinc-600">
+<a class="hover:text-[#6B5B95] transition-colors duration-300" href="#">Privacy Policy</a>
+<a class="hover:text-[#6B5B95] transition-colors duration-300" href="#">Terms of Service</a>
+<a class="hover:text-[#6B5B95] transition-colors duration-300" href="#">Care Instructions</a>
+</div>
+<div class="font-serif text-xs tracking-widest uppercase text-zinc-400 dark:text-zinc-600">
+                © 2026 Browz and Lash Bar. All rights reserved.
+            </div>
 </div>
 </footer>
-</div>
-</div>
-</div>
-</div>
+
+
 </body></html>
